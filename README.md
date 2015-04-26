@@ -4,16 +4,16 @@ This is the assignment for "Getting and Cleaning Data course" offered by John Hp
 Before running the code, please ensure the extracted zip file containing "UCI HAR Dataset" folder is in your working directory
 
 ## The code below reads the files from the working directory
-
-X_test <- read.table("UCI HAR Dataset/test/X_test.txt")
-y_test <- read.table("UCI HAR Dataset/test/y_test.txt")
-X_train <- read.table("UCI HAR Dataset/train/X_train.txt")
-y_train <- read.table("UCI HAR Dataset/train/y_train.txt")
-activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")
-features <- read.table("UCI HAR Dataset/features.txt")
-subject_test<-read.table("UCI HAR Dataset/test/subject_test.txt")
-subject_train<-read.table("UCI HAR Dataset/train/subject_train.txt")
-
+*  
+X_test <- read.table("UCI HAR Dataset/test/X_test.txt")  
+y_test <- read.table("UCI HAR Dataset/test/y_test.txt")  
+X_train <- read.table("UCI HAR Dataset/train/X_train.txt")  
+y_train <- read.table("UCI HAR Dataset/train/y_train.txt")  
+activity_labels <- read.table("UCI HAR Dataset/activity_labels.txt")  
+features <- read.table("UCI HAR Dataset/features.txt")  
+subject_test<-read.table("UCI HAR Dataset/test/subject_test.txt")  
+subject_train<-read.table("UCI HAR Dataset/train/subject_train.txt")  
+!*
 
 
 ## The code blow is for binding together the X_test,y_test and subject_test files into a single DF called test_data
