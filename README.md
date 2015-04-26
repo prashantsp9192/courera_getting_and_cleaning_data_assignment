@@ -24,6 +24,7 @@ names(test_data)[ncol(test_data)]<-"subject"
 
 
 ## The code blow is for binding together the X_train,y_train and subject_train files into a single DF called train_data
+
 train_data<-cbind(X_train,y_train,subject_train)
 names(train_data)[ncol(train_data)-1]<-"activity"
 names(train_data)[ncol(train_data)]<-"subject"
@@ -49,7 +50,7 @@ merged_data_subset<-cbind(merged_data_subset,"subject"=merged_data$subject)
 
 
 
-## defining a hash map called activity_value_map that converts the activity number(key) into the corresponding
+## defining a hash map called activity_value_map that converts the activity number(key) into the corresponding activity_name(value)
 
 activity_name(value)
 activity_value_map<-c()
@@ -69,7 +70,7 @@ merged_data_subset$activity<-temp_vector
 
 
 
-## From the above data set creating a second, independent tidy data set with the average of each variable for each ## activity and each subject.
+## From the above data set creating a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 data_split_per_subject<-split(merged_data_subset,merged_data_subset$subject)
 final_append_activity<-c()
