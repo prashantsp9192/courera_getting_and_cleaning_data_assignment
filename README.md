@@ -70,7 +70,7 @@ merged_data_subset$activity<-temp_vector
 
 
 
-## From the above data set creating a second, independent tidy data set with the average of each variable for each activity and each subject.
+## From the above data set, creating a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 data_split_per_subject<-split(merged_data_subset,merged_data_subset$subject)
 final_append_activity<-c()
