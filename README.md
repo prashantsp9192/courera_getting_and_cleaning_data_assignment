@@ -91,6 +91,15 @@ for(i in 1:length(data_split_per_subject))
 final_data<-cbind(final_data,final_append_activity,final_append_subject)  
 names(final_data)<-names(merged_data_subset)  
 
+##  Assigning names to columns
+data_length<-length(names(merged_data_subset))  
+for(i in 1:data_length)  
+{  
+        names(final_data)[i]<-paste("average_of_",names(merged_data_subset)[i])  
+}  
+names(final_data)[data_length-1]<-"activity"  
+names(final_data)[data_length]<-"subject"  
+
 ## coverting the tidy data set obtained above into .txt format using write.table()
 
 write.table(final_data,"tidy_data_set_containing_averages.txt",row.names=FALSE)  
